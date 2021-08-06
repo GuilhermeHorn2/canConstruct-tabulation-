@@ -1,0 +1,10 @@
+def f(m,n):
+    l = [True]
+    for i in range(len(m)):
+        l.append(False)
+    for i in range(len(m)):
+        if l[i] == True:
+            for word in n:
+                if m[i:i+len(word)] == word:
+                    l[i+len(word)] = True
+    return l[len(m)]
